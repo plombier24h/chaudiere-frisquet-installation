@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chaudière Frisquet installation | DS Plomberie — Paris & Île-de-France</title>
+<meta name="description" content="Installation, remplacement et SAV de chaudières Frisquet par DS Plomberie. Toute la gamme HYDROMOTRIX, PRESTIGE et HYDROCONFORT. Devis gratuit à Paris et en Île-de-France.">
+<style>
+:root{
+  --bg:#ffffff;
+  --bg-alt:#f5f7fa;
+  --hero-base:#0b1626;
+  --card:#ffffff;
+  --card-border:#e6e9ee;
+  --text:#12161c;
+  --muted:#5c6675;
+  --blue:#22529c;
+  --blue-bright:#2f66c2;
+  --blue-glow:rgba(34,82,156,0.14);
+  --red:#e40613;
+  --red-dark:#c40510;
+  --red-glow:rgba(228,6,19,0.14);
+  --green:#1f9d55;
+  --amber:#c98a12;
+  --radius:16px;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+a{color:inherit; text-decoration:none;}
+img{max-width:100%; display:block;}
+section{position:relative;}
+
+/* HEADER */
+header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(255,255,255,0.88);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #ecedf0;
+}
+.header-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 24px; max-width:1180px; margin:0 auto;
+}
+.brand{display:flex; align-items:center; gap:10px; font-weight:800; font-size:1.1rem; letter-spacing:-0.02em; color:var(--text);}
+.brand svg{flex-shrink:0;}
+.brand-sub{display:block; font-size:0.6rem; font-weight:700; letter-spacing:0.12em; color:var(--red); text-transform:uppercase; margin-top:-2px;}
+nav{display:none; gap:28px; font-size:0.92rem; color:var(--muted);}
+nav a:hover{color:var(--text);}
+.header-cta{
+  display:flex; align-items:center; gap:8px;
+  background:var(--red); color:#fff; padding:10px 18px; border-radius:999px;
+  font-weight:700; font-size:0.86rem; white-space:nowrap;
+  box-shadow:0 4px 18px var(--red-glow);
+}
+@media(min-width:840px){ nav{display:flex;} }
+
+/* HERO — video banner, dark scrim, sits above the white site */
+.hero{
+  position:relative; overflow:hidden;
+  padding:110px 24px 80px;
+  text-align:center;
+  background:var(--hero-base);
+}
+.hero-video{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; object-position:center 38%; z-index:0;
+}
+.hero-overlay{
+  position:absolute; inset:0; z-index:1;
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 0%, rgba(228,6,19,0.28), transparent 60%),
+    linear-gradient(180deg, rgba(6,10,18,0.35) 0%, rgba(6,10,18,0.72) 60%, var(--hero-base) 100%);
+}
+.hero > .wrap{ position:relative; z-index:2; }
+.eyebrow{
+  display:inline-flex; align-items:center; gap:9px;
+  background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.25);
+  color:#fff; font-size:0.78rem; font-weight:700; letter-spacing:0.04em;
+  padding:6px 16px 6px 8px; border-radius:999px; margin-bottom:22px;
+}
+.eyebrow img{height:18px; width:auto; border-radius:4px; background:#fff; padding:2px;}
+.hero h1{
+  font-size:clamp(1.9rem, 5.5vw, 3.4rem); font-weight:800; letter-spacing:-0.03em;
+  max-width:820px; margin:0 auto 18px; color:#fff;
+}
+.hero h1 span{color:#ff5a5f;}
+.hero p.lead{
+  color:#c7ccd6; font-size:1.08rem; max-width:600px; margin:0 auto 34px;
+}
+.hero-actions{display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-bottom:40px;}
+.btn{
+  padding:15px 28px; border-radius:12px; font-weight:700; font-size:0.96rem;
+  display:inline-flex; align-items:center; gap:10px; transition:transform .15s ease;
+}
+.btn:hover{transform:translateY(-2px);}
+.btn-primary{background:var(--red); color:#fff; box-shadow:0 8px 26px var(--red-glow);}
+.btn-ghost{background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.3); color:#fff;}
+.hero-meta{
+  display:flex; flex-wrap:wrap; gap:26px; justify-content:center;
+  color:#aeb6c2; font-size:0.85rem;
+}
+.hero-meta div{display:flex; align-items:center; gap:8px;}
+.hero-meta svg{flex-shrink:0; color:#ff5a5f;}
+
+/* TRUST BAR */
+.trust{
+  padding:34px 24px; background:var(--bg-alt); border-bottom:1px solid var(--card-border);
+}
+.trust .wrap{
+  display:grid; grid-template-columns:repeat(2,1fr); gap:22px;
+}
+@media(min-width:760px){ .trust .wrap{grid-template-columns:repeat(4,1fr);} }
+.trust-item{display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; color:var(--muted); font-size:0.84rem;}
+.trust-item svg{color:var(--blue);}
+.trust-item strong{color:var(--text); font-size:0.92rem;}
+
+/* SECTION HEADINGS */
+.section{padding:76px 24px;}
+.section-head{text-align:center; max-width:640px; margin:0 auto 50px;}
+.section-tag{
+  color:var(--red); font-weight:700; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:12px; display:block;
+}
+.section-head h2{font-size:clamp(1.6rem,3.6vw,2.3rem); font-weight:800; letter-spacing:-0.02em; margin-bottom:14px;}
+.section-head p{color:var(--muted); font-size:1rem;}
+
+/* CATALOG */
+.filters{display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:40px;}
+.filter-btn{
+  padding:9px 18px; border-radius:999px; font-size:0.84rem; font-weight:600;
+  background:var(--card); border:1px solid var(--card-border); color:var(--muted); cursor:pointer;
+}
+.filter-btn.active, .filter-btn:hover{ background:var(--blue); border-color:var(--blue); color:#fff; }
+.grid{display:grid; grid-template-columns:1fr; gap:20px;}
+@media(min-width:640px){ .grid{grid-template-columns:repeat(2,1fr);} }
+@media(min-width:980px){ .grid{grid-template-columns:repeat(3,1fr);} }
+.card{
+  background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius);
+  padding:24px; display:flex; flex-direction:column; gap:14px;
+  box-shadow:0 1px 3px rgba(20,25,35,0.04);
+  transition:border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+.card:hover{border-color:var(--blue); transform:translateY(-3px); box-shadow:0 12px 30px rgba(34,82,156,0.12);}
+.card-top{display:flex; align-items:flex-start; justify-content:space-between; gap:12px;}
+.card-icon{
+  width:56px; height:56px; border-radius:12px; background:var(--blue-glow);
+  display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--blue);
+}
+.badge{
+  font-size:0.68rem; font-weight:800; padding:4px 9px; border-radius:6px; letter-spacing:0.03em;
+}
+.badge-A{background:rgba(31,157,85,0.12); color:var(--green);}
+.badge-B{background:rgba(201,138,18,0.12); color:var(--amber);}
+.badge-C{background:rgba(201,138,18,0.12); color:var(--amber);}
+.card h3{font-size:1.02rem; font-weight:700; line-height:1.35;}
+.card .range{color:var(--blue); font-weight:700; font-size:0.98rem;}
+.card .tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:2px;}
+.tag{font-size:0.72rem; color:var(--muted); background:var(--bg-alt); padding:4px 9px; border-radius:6px;}
+.card .ref{color:var(--muted); font-size:0.76rem; margin-top:2px;}
+.card-cta{
+  margin-top:auto; display:flex; align-items:center; justify-content:center; gap:8px;
+  padding:11px; border-radius:10px; background:var(--red-glow); color:var(--red);
+  font-weight:700; font-size:0.85rem; border:1px solid rgba(228,6,19,0.25);
+}
+.card-cta:hover{background:var(--red); color:#fff;}
+
+/* ZONE */
+.zone{background:var(--bg-alt); padding:76px 24px;}
+.zone-inner{display:grid; grid-template-columns:1fr; gap:40px; align-items:center;}
+@media(min-width:860px){ .zone-inner{grid-template-columns:1fr 1fr;} }
+.zone-list{display:flex; flex-direction:column; gap:16px; margin-top:24px;}
+.zone-list div{display:flex; align-items:center; gap:12px; color:var(--muted); font-size:0.94rem;}
+.zone-list svg{color:var(--blue); flex-shrink:0;}
+.zone-tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:20px;}
+.zone-tags span{background:var(--card); border:1px solid var(--card-border); padding:7px 14px; border-radius:999px; font-size:0.8rem; color:var(--muted);}
+.zone-card{
+  background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius); padding:32px;
+  box-shadow:0 1px 3px rgba(20,25,35,0.04);
+}
+.zone-card h3{font-size:1.2rem; margin-bottom:18px;}
+.zone-steps div{display:flex; gap:14px; margin-bottom:18px;}
+.zone-steps .num{
+  width:30px; height:30px; border-radius:50%; background:var(--blue); color:#fff; font-weight:800; font-size:0.85rem;
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.zone-steps p{color:var(--muted); font-size:0.9rem; padding-top:3px;}
+
+/* CONTACT */
+.contact{padding:86px 24px; text-align:center;}
+.contact .wrap{max-width:640px;}
+.contact-actions{display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-top:36px;}
+.contact-card{
+  display:flex; align-items:center; gap:14px; background:var(--card); border:1px solid var(--card-border);
+  padding:18px 24px; border-radius:14px; text-align:left;
+  box-shadow:0 1px 3px rgba(20,25,35,0.04);
+}
+.contact-card svg{color:var(--red); flex-shrink:0;}
+.contact-card strong{display:block; font-size:0.98rem;}
+.contact-card span{color:var(--muted); font-size:0.82rem;}
+
+/* FOOTER */
+footer{border-top:1px solid var(--card-border); padding:40px 24px; text-align:center; color:var(--muted); font-size:0.82rem; background:var(--bg-alt);}
+footer .brand{justify-content:center; margin-bottom:14px;}
+footer p{margin-bottom:6px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="7" fill="#22529c"/><path d="M7 15.5V9.2C7 7.43 8.4 6 10.1 6h3.8C15.6 6 17 7.43 17 9.2v6.3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><path d="M9 15.5h6M9 12h6M12 6v9.5" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="18.2" r="1.3" fill="#fff"/></svg>
+      <div><span>DS Plomberie</span><span class="brand-sub">Installateur Frisquet</span></div>
+    </div>
+    <nav>
+      <a href="#catalogue">Modèles</a>
+      <a href="#zone">Zone d'intervention</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="header-cta" href="tel:0174601795">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11 21 3 13 3 4.9c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="#fff"/></svg>
+      01 74 60 17 95
+    </a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="wrap">
+    <span class="eyebrow">
+      <img src="data:image/jpeg;base64,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" alt="Frisquet">
+      Installateur agréé Frisquet
+    </span>
+    <h1>Installation de chaudières <span>Frisquet</span> à Paris &amp; Île-de-France</h1>
+    <p class="lead">Toute la gamme Frisquet — HYDROMOTRIX, PRESTIGE, HYDROCONFORT — installée, remplacée et entretenue par DS Plomberie. Devis gratuit sous 24h.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="tel:0174601795">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11 21 3 13 3 4.9c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="#fff"/></svg>
+        01 74 60 17 95
+      </a>
+      <a class="btn btn-ghost" href="#catalogue">
+        Voir les modèles
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="hero-meta">
+      <div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.1-7-11a7 7 0 1114 0c0 4.9-7 11-7 11z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>
+        Paris &amp; Île-de-France
+      </div>
+      <div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 7v5l3.5 2M12 21a9 9 0 100-18 9 9 0 000 18z" stroke="currentColor" stroke-width="1.6"/></svg>
+        Devis sous 24h
+      </div>
+      <div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M12 21a9 9 0 100-18 9 9 0 000 18z" stroke="currentColor" stroke-width="1.6"/></svg>
+        16 modèles Frisquet
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-item">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.4 8.7-8 10-4.6-1.3-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="1.6"/></svg>
+      <strong>Fabrication française</strong>
+    </div>
+    <div class="trust-item">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <strong>Installation certifiée</strong>
+    </div>
+    <div class="trust-item">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 2M12 21a9 9 0 100-18 9 9 0 000 18z" stroke="currentColor" stroke-width="1.6"/></svg>
+      <strong>SAV &amp; entretien</strong>
+    </div>
+    <div class="trust-item">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <strong>Dépannage rapide</strong>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="catalogue">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">Catalogue</span>
+      <h2>Les 16 chaudières Frisquet que nous installons</h2>
+      <p>Chauffage seul, mixte chauffage + eau chaude, condensation ou basse température, murale ou au sol — nous vous aidons à choisir le modèle adapté à votre logement.</p>
+    </div>
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">Tous les modèles</button>
+      <button class="filter-btn" data-filter="murale">Murale</button>
+      <button class="filter-btn" data-filter="sol">Au sol</button>
+      <button class="filter-btn" data-filter="condensation">Condensation</button>
+      <button class="filter-btn" data-filter="mixte">Mixte chauffage + ECS</button>
+    </div>
+    <div class="grid" id="product-grid">
+      <div class="card" data-tags="murale condensation mixte">
+        <div class="card-top">
+          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+          <span class="badge badge-A">Classe A/B</span>
+        </div>
+        <h3>HYDROMOTRIX Condensation Visio</h3>
+        <div class="range">18 - 25 kW</div>
+        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale gaz à condensation, mixte instantanée</p>
+        <div class="tags">
+          <span class="tag">Murale</span>
+          <span class="tag">Condensation</span>
+          <span class="tag">Mixte chauffage + ECS</span>
+        </div>
+        <div class="ref">Réf. A4AB25020 · Cedeo 3432055</div>
+        <a class="card-cta" href="tel:0174601795">
+          Demander un devis
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="card" data-tags="murale condensation ecs">
+        <div class="card-top">
+          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+          <span class="badge badge-A">Classe A</span>
+        </div>
+        <h3>HYDROCONFORT Condensation Visio 50+R</h3>
+        <div class="range">20 kW</div>
+        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale à condensation, ECS à accumulation</p>
+        <div class="tags">
+          <span class="tag">Murale</span>
+          <span class="tag">Condensation</span>
+          <span class="tag">ECS à accumulation</span>
+        </div>
+        <div class="ref">Réf. A4AJ20160 · Cedeo 7822874</div>
+        <a class="card-cta" href="tel:0174601795">
+          Demander un devis
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="card" data-tags="murale condensation chauffage">
+        <div class="card-top">
+          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+          <span class="badge badge-A">Classe A</span>
+        </div>
+        <h3>HYDROMOTRIX Condensation Visio</h3>
+        <div class="range">25 - 32 kW</div>
+        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale gaz à condensation, chauffage seul</p>
+        <div class="tags">
+          <span class="tag">Murale</span>
+          <span class="tag">Condensation</span>
+          <span class="tag">Chauffage seul</span>
+        </div>
+        <div class="ref">Réf. A4AB32050 · Cedeo 3432061</div>
+        <a class="card-cta" href="tel:0174601795">
+          Demander un devis
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="card" data-tags="sol condensation mixte">
+        <div class="card-top">
+          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="4" width="12" height="15" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M9 8h6M9 11.5h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <span class="badge badge-A">Classe A/B</span>
+        </div>
+        <h3>PRESTIGE Condensation Visio</h3>
+        <div class="range">18 - 25 kW</div>
+        <p style="color:var(--muted); font-size:0.85rem;">Chaudière au sol gaz à condensation, mixte instantanée</p>
+        <div class="tags">
+          <span class="tag">Au sol</span>
+          <span class="tag">Condensation</span>
+          <span class="tag">Mixte chauffage + ECS</span>
+        </div>
+        <div class="ref">Réf. A4AL25020 · Cedeo 3432176</div>
+        <a class="card-cta" href="tel:0174601795">
+          Demander un devis
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="card" data-tags="sol condensation chauffage">
+        <div class="card-top">
+          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="4" width="12" height="15" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M9 8h6M9 11.5h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <span class="badge badge-A">Classe A</span>
+        </div>
+        <h3>PRESTIGE Condensation Visio</h3>
+        <div class="range">18 - 25 kW</div>
+        <p style="color:var(--muted); font-size:0.85rem;">Chaudière au sol gaz à condensation, chauffage seul</p>
+        <div class="tags">
+          <span class="tag">Au sol</span>
+          <span class="tag">Condensation</span>
+          <span class="tag">Chauffage seul</span>
+        </div>
+        <div class="ref">Réf. A4AL25050 · Cedeo 3432177</div>
+        <a class="card-cta" href="tel:0174601795">
+          Demander un devis
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="card" data-tags="murale condensation mixte">
+        <div class="card-top">
+          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+          <span class="badge badge-A">Classe A/B</span>
+        </div>
+        <h3>HYDROCONFORT Condensation Visio</h3>
+        <div class="range">14 - 20 kW</div>
+        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale gaz à condensation, mixte à accumulation 80L</p>
+        <div class="tags">
+          <span class="tag">Murale</span>
+          <span class="tag">Condensation</span>
+          <span class="tag">Mixte chauffage + ECS</span>
+        </div>
+        <div class="ref">Réf. A4AJ20020 · Cedeo 3432069</div>
+        <a class="card-cta" href="tel:0174601795">
+          Demander un devis
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="card" data-tags="murale basse-temperature mixte">
+        <div class="card-top">
+          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+          <span class="badge badge-B">Classe B</span>
+        </div>
+        <h3>HYDROMOTRIX Compact Evolution Visio</h3>
+        <div class="range">25 kW</div>
+        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale gaz basse température, mixte instantanée</p>
+        <div class="tags">
+          <span class="tag">Murale</span>
+          <span class="tag">Basse température</span>
+          <span class="tag">Mixte chauffage + ECS</span>
+        </div>
+        <div class="ref">Réf. Cedeo 3655678</div>
+        <a class="card-cta" href="tel:0174601795">
+          Demander un devis
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="card" data-tags="murale basse-temperature chauffage">
+        <div class="card-top">
+          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+          <span class="badge badge-B">Classe B</span>
+        </div>
+        <h3>HYDROMOTRIX Evolution Visio</h3>
+        <div class="range">25 kW</div>
+        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale gaz, chauffage seul, sortie cheminée</p>
+        <div class="tags">
+          <span class="tag">Murale</span>
+          <span class="tag">Basse température</span>
+          <span class="tag">Chauffage seul</span>
+        </div>
+        <div class="ref">Réf. B4AA25050 · Cedeo 3750778</div>
+        <a class="card-cta" href="tel:0174601795">
+          Demander un devis
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="card" data-tags="murale basse-temperature mixte">
+        <div class="card-top">
+          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+          <span class="badge badge-B">Classe B</span>
+        </div>
+        <h3>HYDROMOTRIX Evolution Visio</h3>
+        <div class="range">25 kW</div>
+        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale VMC gaz basse température, mixte instantanée</p>
+        <div class="tags">
+          <span class="tag">Murale</span>
+          <span class="tag">Basse température</span>
+          <span class="tag">Mixte chauffage + ECS</span>
+        </div>
+        <div class="ref">Réf. B4AA25030 · Cedeo 3813426</div>
+        <a class="card-cta" href="tel:0174601795">
+          Demander un devis
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="card" data-tags="murale basse-temperature mixte">
+        <div class="card-top">
+          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+          <span class="badge badge-C">Classe C/B</span>
+        </div>
+        <h3>HYDROMOTRIX Tradition Visio</h3>
+        <div class="range">23 kW</div>
+        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale cheminée, mixte instantanée</p>
+        <div class="tags">
+          <span class="tag">Murale</span>
+          <span class="tag">Basse température</span>
+          <span class="tag">Mixte chauffage + ECS</span>
+        </div>
+        <div class="ref">Réf. D4AA23230 · Cedeo 6149589</div>
+        <a class="card-cta" href="tel:0174601795">
+          Demander un devis
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="card" data-tags="sol condensation mixte">
+        <div class="card-top">
+          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="4" width="12" height="15" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M9 8h6M9 11.5h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <span class="badge badge-A">Classe A</span>
+        </div>
+        <h3>PRESTIGE Condensation Visio</h3>
+        <div class="range">14 - 20 kW</div>
+        <p style="color:var(--muted); font-size:0.85rem;">Chaudière au sol gaz à condensation, mixte à accumulation 80L</p>
+        <div class="tags">
+          <span class="tag">Au sol</span>
+          <span class="tag">Condensation</span>
+          <span class="tag">Mixte chauffage + ECS</span>
+        </div>
+        <div class="ref">Réf. A4AL20050 · Cedeo 3432075</div>
+        <a class="card-cta" href="tel:0174601795">
+          Demander un devis
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="card" data-tags="murale basse-temperature mixte">
+        <div class="card-top">
+          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+          <span class="badge badge-B">Classe B</span>
+        </div>
+        <h3>HYDROMOTRIX Evolution Visio</h3>
+        <div class="range">30 kW</div>
+        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale basse température, mixte instantanée</p>
+        <div class="tags">
+          <span class="tag">Murale</span>
+          <span class="tag">Basse température</span>
+          <span class="tag">Mixte chauffage + ECS</span>
+        </div>
+        <div class="ref">Réf. B4AB30… · Cedeo 6151405</div>
+        <a class="card-cta" href="tel:0174601795">
+          Demander un devis
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="card" data-tags="murale basse-temperature chauffage">
+        <div class="card-top">
+          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+          <span class="badge badge-B">Classe B</span>
+        </div>
+        <h3>HYDROMOTRIX Compact Visio</h3>
+        <div class="range">25 kW</div>
+        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale CS + VMC</p>
+        <div class="tags">
+          <span class="tag">Murale</span>
+          <span class="tag">Basse température</span>
+          <span class="tag">Chauffage seul</span>
+        </div>
+        <div class="ref">Réf. B4AO25060 · Cedeo 3655682</div>
+        <a class="card-cta" href="tel:0174601795">
+          Demander un devis
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="card" data-tags="murale condensation mixte">
+        <div class="card-top">
+          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+          <span class="badge badge-A">Classe A</span>
+        </div>
+        <h3>HYDROCONFORT Condensation Solaire</h3>
+        <div class="range">20 kW</div>
+        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale nue à condensation, chauffage + ECS accumulation solaire</p>
+        <div class="tags">
+          <span class="tag">Murale</span>
+          <span class="tag">Condensation</span>
+          <span class="tag">Mixte chauffage + ECS</span>
+        </div>
+        <div class="ref">Réf. A4AO20000 · Cedeo 3762495</div>
+        <a class="card-cta" href="tel:0174601795">
+          Demander un devis
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="card" data-tags="murale basse-temperature chauffage">
+        <div class="card-top">
+          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+          <span class="badge badge-B">Classe B</span>
+        </div>
+        <h3>HYDROMOTRIX Compact Evolution Visio</h3>
+        <div class="range">25 kW</div>
+        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale basse température, chauffage seul</p>
+        <div class="tags">
+          <span class="tag">Murale</span>
+          <span class="tag">Basse température</span>
+          <span class="tag">Chauffage seul</span>
+        </div>
+        <div class="ref">Réf. Cedeo 3655681</div>
+        <a class="card-cta" href="tel:0174601795">
+          Demander un devis
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="card" data-tags="murale condensation chauffage">
+        <div class="card-top">
+          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+          <span class="badge badge-A">Classe A</span>
+        </div>
+        <h3>HYDROMOTRIX Visio</h3>
+        <div class="range">45 kW</div>
+        <p style="color:var(--muted); font-size:0.85rem;">Chaudière à condensation, chauffage seul</p>
+        <div class="tags">
+          <span class="tag">Murale</span>
+          <span class="tag">Condensation</span>
+          <span class="tag">Chauffage seul</span>
+        </div>
+        <div class="ref">Réf. A4AB45220 · Cedeo 7605217</div>
+        <a class="card-cta" href="tel:0174601795">
+          Demander un devis
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="zone" id="zone">
+  <div class="wrap zone-inner">
+    <div>
+      <span class="section-tag">Zone d'intervention</span>
+      <h2 style="font-size:clamp(1.5rem,3.2vw,2.1rem); font-weight:800; letter-spacing:-0.02em;">Paris et toute l'Île-de-France</h2>
+      <p style="color:var(--muted); margin-top:14px;">DS Plomberie intervient chez les particuliers, syndics et gestionnaires pour l'installation et le remplacement de chaudières Frisquet, ainsi que leur entretien annuel.</p>
+      <div class="zone-list">
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Paris (75) et petite couronne</div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne</div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Grande couronne sur devis</div>
+      </div>
+      <div class="zone-tags">
+        <span>Copropriétés</span><span>Maisons individuelles</span><span>Syndics</span><span>Agences immobilières</span>
+      </div>
+    </div>
+    <div class="zone-card">
+      <h3>Comment ça se passe</h3>
+      <div class="zone-steps">
+        <div><div class="num">1</div><p>Appel ou message — vous décrivez votre besoin (remplacement, panne, projet neuf).</p></div>
+        <div><div class="num">2</div><p>Visite technique et devis gratuit, sans engagement.</p></div>
+        <div><div class="num">3</div><p>Installation par un technicien qualifié, mise en service et explications.</p></div>
+        <div><div class="num">4</div><p>Suivi et contrat d'entretien si besoin.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="section-tag">Contact</span>
+    <h2 style="font-size:clamp(1.6rem,3.6vw,2.3rem); font-weight:800; letter-spacing:-0.02em; margin-bottom:14px;">Un projet de chaudière Frisquet ?</h2>
+    <p style="color:var(--muted);">Contactez DS Plomberie pour un devis gratuit, une intervention rapide ou une question technique.</p>
+    <div class="contact-actions">
+      <a class="contact-card" href="tel:0174601795">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11 21 3 13 3 4.9c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="currentColor"/></svg>
+        <div><strong>01 74 60 17 95</strong><span>Ligne fixe</span></div>
+      </a>
+      <a class="contact-card" href="tel:0616694989">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11 21 3 13 3 4.9c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="currentColor"/></svg>
+        <div><strong>06 16 69 49 89</strong><span>Mobile</span></div>
+      </a>
+      <a class="contact-card" href="mailto:plombierds24@gmail.com">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 6h18v12H3V6z" stroke="currentColor" stroke-width="1.6"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.6"/></svg>
+        <div><strong>plombierds24@gmail.com</strong><span>Devis &amp; questions</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="7" fill="#22529c"/><path d="M7 15.5V9.2C7 7.43 8.4 6 10.1 6h3.8C15.6 6 17 7.43 17 9.2v6.3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><path d="M9 15.5h6M9 12h6M12 6v9.5" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="18.2" r="1.3" fill="#fff"/></svg>
+    <span style="font-weight:800;">DS Plomberie</span>
+  </div>
+  <p>Installation et entretien de chaudières Frisquet — Paris &amp; Île-de-France</p>
+  <p>01 74 60 17 95 · plombierds24@gmail.com</p>
+  <p>&copy; <span id="year"></span> DS Plomberie. Tous droits réservés.</p>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('#product-grid .card');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    cards.forEach(card => {
+      const tags = card.dataset.tags || '';
+      card.style.display = (f === 'all' || tags.includes(f)) ? '' : 'none';
+    });
+  });
+});
+</script>
+
+</body>
+</html>
