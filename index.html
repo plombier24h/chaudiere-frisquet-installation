@@ -209,6 +209,26 @@ nav a:hover{color:var(--text);}
 footer{border-top:1px solid var(--card-border); padding:40px 24px; text-align:center; color:var(--muted); font-size:0.82rem; background:var(--bg-alt);}
 footer .brand{justify-content:center; margin-bottom:14px;}
 footer p{margin-bottom:6px;}
+
+    /* ===== carte produit avec visuel ===== */
+    .card{padding:0; overflow:hidden;}
+    .card-visuel{position:relative; background:#fff; border-bottom:1px solid var(--card-border);
+      height:230px; display:flex; align-items:center; justify-content:center; padding:16px;}
+    .card-visuel img{max-height:100%; max-width:100%; width:auto; object-fit:contain; display:block;}
+    .card-fallback{display:none; width:56px; height:56px; border-radius:12px; background:var(--blue-glow);
+      align-items:center; justify-content:center; color:var(--blue);}
+    .card-visuel.sans-image img{display:none;}
+    .card-visuel.sans-image .card-fallback{display:flex;}
+    .card-visuel .badge{position:absolute; top:12px; right:12px;}
+    .card-corps{padding:20px 24px 0; display:flex; flex-direction:column; gap:10px;}
+    .card-corps h3{margin:0;}
+    .specs{list-style:none; margin:4px 0 0; padding:0; display:grid; gap:5px;}
+    .specs li{display:flex; justify-content:space-between; gap:12px; font-size:0.82rem;
+      border-bottom:1px dashed var(--card-border); padding-bottom:5px;}
+    .specs li:last-child{border-bottom:none;}
+    .specs li span{color:var(--muted); flex-shrink:0;}
+    .card-desc{color:var(--muted); font-size:0.86rem; line-height:1.55; margin:2px 0 0;}
+    .card .card-cta{margin:16px 24px 24px;}
 </style>
 </head>
 <body>
@@ -307,309 +327,438 @@ footer p{margin-bottom:6px;}
     </div>
     <div class="grid" id="product-grid">
       <div class="card" data-tags="murale condensation mixte">
-        <div class="card-top">
-          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+        <div class="card-visuel">
+          <img src="https://www.cedeo.fr/asset/72/65/AST2027265-L.jpg" alt="Chaudière Frisquet HYDROMOTRIX Condensation Visio 18 - 25 kW" loading="lazy" decoding="async"
+               onerror="this.closest('.card-visuel').classList.add('sans-image')">
+          <div class="card-fallback"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
           <span class="badge badge-A">Classe A/B</span>
         </div>
-        <h3>HYDROMOTRIX Condensation Visio</h3>
-        <div class="range">18 - 25 kW</div>
-        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale gaz à condensation, mixte instantanée</p>
-        <div class="tags">
-          <span class="tag">Murale</span>
-          <span class="tag">Condensation</span>
-          <span class="tag">Mixte chauffage + ECS</span>
+        <div class="card-corps">
+          <h3>HYDROMOTRIX Condensation Visio</h3>
+          <div class="range">18 - 25 kW</div>
+          <ul class="specs">
+            <li><span>Pose</span>Murale</li>
+            <li><span>Technologie</span>Condensation</li>
+            <li><span>Eau chaude</span>Instantanée</li>
+            <li><span>Évacuation</span>Ventouse</li>
+          </ul>
+          <p class="card-desc">Chauffage et eau chaude sanitaire produite à la demande. Le modèle le plus courant en appartement et en maison de ville.</p>
+          <div class="tags">
+            <span class="tag">Murale</span><span class="tag">Condensation</span><span class="tag">Mixte chauffage + ECS</span>
+          </div>
+          <div class="ref">Réf. A4AB25020 · Cedeo 3432055</div>
         </div>
-        <div class="ref">Réf. A4AB25020 · Cedeo 3432055</div>
         <a class="card-cta" href="tel:0174601795">
           Demander un devis
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
       <div class="card" data-tags="murale condensation ecs">
-        <div class="card-top">
-          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+        <div class="card-visuel">
+          <img src="https://www.cedeo.fr/asset/72/62/AST3647262-L.jpg" alt="Chaudière Frisquet HYDROCONFORT Condensation Visio 50+R 20 kW" loading="lazy" decoding="async"
+               onerror="this.closest('.card-visuel').classList.add('sans-image')">
+          <div class="card-fallback"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
           <span class="badge badge-A">Classe A</span>
         </div>
-        <h3>HYDROCONFORT Condensation Visio 50+R</h3>
-        <div class="range">20 kW</div>
-        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale à condensation, ECS à accumulation</p>
-        <div class="tags">
-          <span class="tag">Murale</span>
-          <span class="tag">Condensation</span>
-          <span class="tag">ECS à accumulation</span>
+        <div class="card-corps">
+          <h3>HYDROCONFORT Condensation Visio 50+R</h3>
+          <div class="range">20 kW</div>
+          <ul class="specs">
+            <li><span>Pose</span>Murale</li>
+            <li><span>Technologie</span>Condensation</li>
+            <li><span>Eau chaude</span>Accumulée 50 L renforcée</li>
+            <li><span>Évacuation</span>Ventouse</li>
+          </ul>
+          <p class="card-desc">Réserve d'eau chaude intégrée : débit soutenu pour une famille avec plusieurs points de puisage.</p>
+          <div class="tags">
+            <span class="tag">Murale</span><span class="tag">Condensation</span><span class="tag">Eau chaude accumulée</span>
+          </div>
+          <div class="ref">Réf. A4AJ20160 · Cedeo 7822874</div>
         </div>
-        <div class="ref">Réf. A4AJ20160 · Cedeo 7822874</div>
         <a class="card-cta" href="tel:0174601795">
           Demander un devis
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
-      <div class="card" data-tags="murale condensation chauffage">
-        <div class="card-top">
-          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+      <div class="card" data-tags="murale condensation">
+        <div class="card-visuel">
+          <img src="https://www.cedeo.fr/asset/72/64/AST2027264-L.jpg" alt="Chaudière Frisquet HYDROMOTRIX Condensation Visio 25 - 32 kW" loading="lazy" decoding="async"
+               onerror="this.closest('.card-visuel').classList.add('sans-image')">
+          <div class="card-fallback"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
           <span class="badge badge-A">Classe A</span>
         </div>
-        <h3>HYDROMOTRIX Condensation Visio</h3>
-        <div class="range">25 - 32 kW</div>
-        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale gaz à condensation, chauffage seul</p>
-        <div class="tags">
-          <span class="tag">Murale</span>
-          <span class="tag">Condensation</span>
-          <span class="tag">Chauffage seul</span>
+        <div class="card-corps">
+          <h3>HYDROMOTRIX Condensation Visio</h3>
+          <div class="range">25 - 32 kW</div>
+          <ul class="specs">
+            <li><span>Pose</span>Murale</li>
+            <li><span>Technologie</span>Condensation</li>
+            <li><span>Eau chaude</span>Non — chauffage seul</li>
+            <li><span>Évacuation</span>Ventouse</li>
+          </ul>
+          <p class="card-desc">Chauffage seul, à associer à un ballon d'eau chaude existant. Puissance adaptée aux grands volumes.</p>
+          <div class="tags">
+            <span class="tag">Murale</span><span class="tag">Condensation</span>
+          </div>
+          <div class="ref">Réf. A4AB32050 · Cedeo 3432061</div>
         </div>
-        <div class="ref">Réf. A4AB32050 · Cedeo 3432061</div>
         <a class="card-cta" href="tel:0174601795">
           Demander un devis
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
       <div class="card" data-tags="sol condensation mixte">
-        <div class="card-top">
-          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="4" width="12" height="15" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M9 8h6M9 11.5h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div class="card-visuel">
+          <img src="https://www.cedeo.fr/asset/72/67/AST2027267-L.jpg" alt="Chaudière Frisquet PRESTIGE Condensation Visio 18 - 25 kW" loading="lazy" decoding="async"
+               onerror="this.closest('.card-visuel').classList.add('sans-image')">
+          <div class="card-fallback"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
           <span class="badge badge-A">Classe A/B</span>
         </div>
-        <h3>PRESTIGE Condensation Visio</h3>
-        <div class="range">18 - 25 kW</div>
-        <p style="color:var(--muted); font-size:0.85rem;">Chaudière au sol gaz à condensation, mixte instantanée</p>
-        <div class="tags">
-          <span class="tag">Au sol</span>
-          <span class="tag">Condensation</span>
-          <span class="tag">Mixte chauffage + ECS</span>
+        <div class="card-corps">
+          <h3>PRESTIGE Condensation Visio</h3>
+          <div class="range">18 - 25 kW</div>
+          <ul class="specs">
+            <li><span>Pose</span>Au sol</li>
+            <li><span>Technologie</span>Condensation</li>
+            <li><span>Eau chaude</span>Instantanée</li>
+            <li><span>Évacuation</span>Ventouse</li>
+          </ul>
+          <p class="card-desc">Version au sol, pour un local technique, une cave ou un garage. Chauffage et eau chaude à la demande.</p>
+          <div class="tags">
+            <span class="tag">Au sol</span><span class="tag">Condensation</span><span class="tag">Mixte chauffage + ECS</span>
+          </div>
+          <div class="ref">Réf. A4AL25020 · Cedeo 3432176</div>
         </div>
-        <div class="ref">Réf. A4AL25020 · Cedeo 3432176</div>
         <a class="card-cta" href="tel:0174601795">
           Demander un devis
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
-      <div class="card" data-tags="sol condensation chauffage">
-        <div class="card-top">
-          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="4" width="12" height="15" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M9 8h6M9 11.5h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+      <div class="card" data-tags="sol condensation">
+        <div class="card-visuel">
+          <img src="https://www.cedeo.fr/asset/72/68/AST2027268-L.jpg" alt="Chaudière Frisquet PRESTIGE Condensation Visio 18 - 25 kW" loading="lazy" decoding="async"
+               onerror="this.closest('.card-visuel').classList.add('sans-image')">
+          <div class="card-fallback"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
           <span class="badge badge-A">Classe A</span>
         </div>
-        <h3>PRESTIGE Condensation Visio</h3>
-        <div class="range">18 - 25 kW</div>
-        <p style="color:var(--muted); font-size:0.85rem;">Chaudière au sol gaz à condensation, chauffage seul</p>
-        <div class="tags">
-          <span class="tag">Au sol</span>
-          <span class="tag">Condensation</span>
-          <span class="tag">Chauffage seul</span>
+        <div class="card-corps">
+          <h3>PRESTIGE Condensation Visio</h3>
+          <div class="range">18 - 25 kW</div>
+          <ul class="specs">
+            <li><span>Pose</span>Au sol</li>
+            <li><span>Technologie</span>Condensation</li>
+            <li><span>Eau chaude</span>Non — chauffage seul</li>
+            <li><span>Évacuation</span>Ventouse</li>
+          </ul>
+          <p class="card-desc">Chauffage seul au sol, à coupler à une production d'eau chaude indépendante.</p>
+          <div class="tags">
+            <span class="tag">Au sol</span><span class="tag">Condensation</span>
+          </div>
+          <div class="ref">Réf. A4AL25050 · Cedeo 3432177</div>
         </div>
-        <div class="ref">Réf. A4AL25050 · Cedeo 3432177</div>
         <a class="card-cta" href="tel:0174601795">
           Demander un devis
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
       <div class="card" data-tags="murale condensation mixte">
-        <div class="card-top">
-          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+        <div class="card-visuel">
+          <img src="https://www.cedeo.fr/asset/65/39/AST256539-L.jpg" alt="Chaudière Frisquet HYDROCONFORT Condensation Visio 14 - 20 kW" loading="lazy" decoding="async"
+               onerror="this.closest('.card-visuel').classList.add('sans-image')">
+          <div class="card-fallback"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
           <span class="badge badge-A">Classe A/B</span>
         </div>
-        <h3>HYDROCONFORT Condensation Visio</h3>
-        <div class="range">14 - 20 kW</div>
-        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale gaz à condensation, mixte à accumulation 80L</p>
-        <div class="tags">
-          <span class="tag">Murale</span>
-          <span class="tag">Condensation</span>
-          <span class="tag">Mixte chauffage + ECS</span>
+        <div class="card-corps">
+          <h3>HYDROCONFORT Condensation Visio</h3>
+          <div class="range">14 - 20 kW</div>
+          <ul class="specs">
+            <li><span>Pose</span>Murale</li>
+            <li><span>Technologie</span>Condensation</li>
+            <li><span>Eau chaude</span>Accumulée 80 L</li>
+            <li><span>Évacuation</span>Ventouse</li>
+          </ul>
+          <p class="card-desc">Ballon de 80 litres intégré : confort d'eau chaude sans attente, même à plusieurs robinets.</p>
+          <div class="tags">
+            <span class="tag">Murale</span><span class="tag">Condensation</span><span class="tag">Mixte chauffage + ECS</span>
+          </div>
+          <div class="ref">Réf. A4AJ20020 · Cedeo 3432069</div>
         </div>
-        <div class="ref">Réf. A4AJ20020 · Cedeo 3432069</div>
         <a class="card-cta" href="tel:0174601795">
           Demander un devis
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
-      <div class="card" data-tags="murale basse-temperature mixte">
-        <div class="card-top">
-          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+      <div class="card" data-tags="murale mixte">
+        <div class="card-visuel">
+          <img src="https://www.cedeo.fr/asset/37/56/AST3813756-L.jpg" alt="Chaudière Frisquet HYDROMOTRIX Compact Evolution Visio 25 kW" loading="lazy" decoding="async"
+               onerror="this.closest('.card-visuel').classList.add('sans-image')">
+          <div class="card-fallback"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
           <span class="badge badge-B">Classe B</span>
         </div>
-        <h3>HYDROMOTRIX Compact Evolution Visio</h3>
-        <div class="range">25 kW</div>
-        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale gaz basse température, mixte instantanée</p>
-        <div class="tags">
-          <span class="tag">Murale</span>
-          <span class="tag">Basse température</span>
-          <span class="tag">Mixte chauffage + ECS</span>
+        <div class="card-corps">
+          <h3>HYDROMOTRIX Compact Evolution Visio</h3>
+          <div class="range">25 kW</div>
+          <ul class="specs">
+            <li><span>Pose</span>Murale</li>
+            <li><span>Technologie</span>Basse température</li>
+            <li><span>Eau chaude</span>Instantanée</li>
+            <li><span>Évacuation</span>Ventouse</li>
+          </ul>
+          <p class="card-desc">Format compact pour les emplacements réduits : placard, cuisine, sous-pente.</p>
+          <div class="tags">
+            <span class="tag">Murale</span><span class="tag">Mixte chauffage + ECS</span>
+          </div>
+          <div class="ref">Réf. Cedeo 3655678</div>
         </div>
-        <div class="ref">Réf. Cedeo 3655678</div>
         <a class="card-cta" href="tel:0174601795">
           Demander un devis
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
-      <div class="card" data-tags="murale basse-temperature chauffage">
-        <div class="card-top">
-          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+      <div class="card" data-tags="murale">
+        <div class="card-visuel">
+          <img src="https://www.cedeo.fr/asset/28/79/AST192879-L.jpg" alt="Chaudière Frisquet HYDROMOTRIX Evolution Visio 25 kW" loading="lazy" decoding="async"
+               onerror="this.closest('.card-visuel').classList.add('sans-image')">
+          <div class="card-fallback"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
           <span class="badge badge-B">Classe B</span>
         </div>
-        <h3>HYDROMOTRIX Evolution Visio</h3>
-        <div class="range">25 kW</div>
-        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale gaz, chauffage seul, sortie cheminée</p>
-        <div class="tags">
-          <span class="tag">Murale</span>
-          <span class="tag">Basse température</span>
-          <span class="tag">Chauffage seul</span>
+        <div class="card-corps">
+          <h3>HYDROMOTRIX Evolution Visio</h3>
+          <div class="range">25 kW</div>
+          <ul class="specs">
+            <li><span>Pose</span>Murale</li>
+            <li><span>Technologie</span>Basse température</li>
+            <li><span>Eau chaude</span>Non — chauffage seul</li>
+            <li><span>Évacuation</span>Sortie cheminée</li>
+          </ul>
+          <p class="card-desc">Raccordement sur conduit de cheminée existant. Chauffage seul.</p>
+          <div class="tags">
+            <span class="tag">Murale</span>
+          </div>
+          <div class="ref">Réf. B4AA25050 · Cedeo 3750778</div>
         </div>
-        <div class="ref">Réf. B4AA25050 · Cedeo 3750778</div>
         <a class="card-cta" href="tel:0174601795">
           Demander un devis
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
-      <div class="card" data-tags="murale basse-temperature mixte">
-        <div class="card-top">
-          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+      <div class="card" data-tags="murale mixte">
+        <div class="card-visuel">
+          <img src="https://www.cedeo.fr/asset/28/79/AST192879-L.jpg" alt="Chaudière Frisquet HYDROMOTRIX Evolution Visio VMC 25 kW" loading="lazy" decoding="async"
+               onerror="this.closest('.card-visuel').classList.add('sans-image')">
+          <div class="card-fallback"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
           <span class="badge badge-B">Classe B</span>
         </div>
-        <h3>HYDROMOTRIX Evolution Visio</h3>
-        <div class="range">25 kW</div>
-        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale VMC gaz basse température, mixte instantanée</p>
-        <div class="tags">
-          <span class="tag">Murale</span>
-          <span class="tag">Basse température</span>
-          <span class="tag">Mixte chauffage + ECS</span>
+        <div class="card-corps">
+          <h3>HYDROMOTRIX Evolution Visio VMC</h3>
+          <div class="range">25 kW</div>
+          <ul class="specs">
+            <li><span>Pose</span>Murale</li>
+            <li><span>Technologie</span>Basse température</li>
+            <li><span>Eau chaude</span>Instantanée</li>
+            <li><span>Évacuation</span>VMC gaz</li>
+          </ul>
+          <p class="card-desc">Conçue pour les immeubles équipés d'une VMC gaz collective. Chauffage et eau chaude.</p>
+          <div class="tags">
+            <span class="tag">Murale</span><span class="tag">Mixte chauffage + ECS</span>
+          </div>
+          <div class="ref">Réf. B4AA25030 · Cedeo 3813426</div>
         </div>
-        <div class="ref">Réf. B4AA25030 · Cedeo 3813426</div>
         <a class="card-cta" href="tel:0174601795">
           Demander un devis
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
-      <div class="card" data-tags="murale basse-temperature mixte">
-        <div class="card-top">
-          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+      <div class="card" data-tags="murale mixte">
+        <div class="card-visuel">
+          <img src="https://www.cedeo.fr/asset/72/80/AST2027280-L.jpg" alt="Chaudière Frisquet HYDROMOTRIX Tradition Visio 23 kW" loading="lazy" decoding="async"
+               onerror="this.closest('.card-visuel').classList.add('sans-image')">
+          <div class="card-fallback"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
           <span class="badge badge-C">Classe C/B</span>
         </div>
-        <h3>HYDROMOTRIX Tradition Visio</h3>
-        <div class="range">23 kW</div>
-        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale cheminée, mixte instantanée</p>
-        <div class="tags">
-          <span class="tag">Murale</span>
-          <span class="tag">Basse température</span>
-          <span class="tag">Mixte chauffage + ECS</span>
+        <div class="card-corps">
+          <h3>HYDROMOTRIX Tradition Visio</h3>
+          <div class="range">23 kW</div>
+          <ul class="specs">
+            <li><span>Pose</span>Murale</li>
+            <li><span>Technologie</span>Traditionnelle</li>
+            <li><span>Eau chaude</span>Instantanée</li>
+            <li><span>Évacuation</span>Sortie cheminée</li>
+          </ul>
+          <p class="card-desc">Remplacement à l'identique sur conduit de cheminée, sans travaux d'évacuation.</p>
+          <div class="tags">
+            <span class="tag">Murale</span><span class="tag">Mixte chauffage + ECS</span>
+          </div>
+          <div class="ref">Réf. D4AA23230 · Cedeo 6149589</div>
         </div>
-        <div class="ref">Réf. D4AA23230 · Cedeo 6149589</div>
         <a class="card-cta" href="tel:0174601795">
           Demander un devis
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
       <div class="card" data-tags="sol condensation mixte">
-        <div class="card-top">
-          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="4" width="12" height="15" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M9 8h6M9 11.5h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div class="card-visuel">
+          <img src="https://www.cedeo.fr/asset/24/92/AST2152492-L.jpg" alt="Chaudière Frisquet PRESTIGE Condensation Visio 14 - 20 kW" loading="lazy" decoding="async"
+               onerror="this.closest('.card-visuel').classList.add('sans-image')">
+          <div class="card-fallback"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
           <span class="badge badge-A">Classe A</span>
         </div>
-        <h3>PRESTIGE Condensation Visio</h3>
-        <div class="range">14 - 20 kW</div>
-        <p style="color:var(--muted); font-size:0.85rem;">Chaudière au sol gaz à condensation, mixte à accumulation 80L</p>
-        <div class="tags">
-          <span class="tag">Au sol</span>
-          <span class="tag">Condensation</span>
-          <span class="tag">Mixte chauffage + ECS</span>
+        <div class="card-corps">
+          <h3>PRESTIGE Condensation Visio</h3>
+          <div class="range">14 - 20 kW</div>
+          <ul class="specs">
+            <li><span>Pose</span>Au sol</li>
+            <li><span>Technologie</span>Condensation</li>
+            <li><span>Eau chaude</span>Accumulée 80 L</li>
+            <li><span>Évacuation</span>Ventouse</li>
+          </ul>
+          <p class="card-desc">Au sol avec ballon de 80 litres intégré. Le meilleur confort d'eau chaude de la gamme.</p>
+          <div class="tags">
+            <span class="tag">Au sol</span><span class="tag">Condensation</span><span class="tag">Mixte chauffage + ECS</span>
+          </div>
+          <div class="ref">Réf. A4AL20050 · Cedeo 3432075</div>
         </div>
-        <div class="ref">Réf. A4AL20050 · Cedeo 3432075</div>
         <a class="card-cta" href="tel:0174601795">
           Demander un devis
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
-      <div class="card" data-tags="murale basse-temperature mixte">
-        <div class="card-top">
-          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+      <div class="card" data-tags="murale mixte">
+        <div class="card-visuel">
+          <img src="https://www.cedeo.fr/asset/72/73/AST2027273-L.jpg" alt="Chaudière Frisquet HYDROMOTRIX Evolution Visio 30 kW" loading="lazy" decoding="async"
+               onerror="this.closest('.card-visuel').classList.add('sans-image')">
+          <div class="card-fallback"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
           <span class="badge badge-B">Classe B</span>
         </div>
-        <h3>HYDROMOTRIX Evolution Visio</h3>
-        <div class="range">30 kW</div>
-        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale basse température, mixte instantanée</p>
-        <div class="tags">
-          <span class="tag">Murale</span>
-          <span class="tag">Basse température</span>
-          <span class="tag">Mixte chauffage + ECS</span>
+        <div class="card-corps">
+          <h3>HYDROMOTRIX Evolution Visio</h3>
+          <div class="range">30 kW</div>
+          <ul class="specs">
+            <li><span>Pose</span>Murale</li>
+            <li><span>Technologie</span>Basse température</li>
+            <li><span>Eau chaude</span>Instantanée</li>
+            <li><span>Évacuation</span>Ventouse</li>
+          </ul>
+          <p class="card-desc">Puissance renforcée pour les grandes surfaces et les installations à nombreux radiateurs.</p>
+          <div class="tags">
+            <span class="tag">Murale</span><span class="tag">Mixte chauffage + ECS</span>
+          </div>
+          <div class="ref">Réf. Cedeo 6151405</div>
         </div>
-        <div class="ref">Réf. B4AB30… · Cedeo 6151405</div>
         <a class="card-cta" href="tel:0174601795">
           Demander un devis
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
-      <div class="card" data-tags="murale basse-temperature chauffage">
-        <div class="card-top">
-          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+      <div class="card" data-tags="murale">
+        <div class="card-visuel">
+          <img src="https://www.cedeo.fr/asset/37/56/AST3813756-L.jpg" alt="Chaudière Frisquet HYDROMOTRIX Compact Visio 25 kW" loading="lazy" decoding="async"
+               onerror="this.closest('.card-visuel').classList.add('sans-image')">
+          <div class="card-fallback"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
           <span class="badge badge-B">Classe B</span>
         </div>
-        <h3>HYDROMOTRIX Compact Visio</h3>
-        <div class="range">25 kW</div>
-        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale CS + VMC</p>
-        <div class="tags">
-          <span class="tag">Murale</span>
-          <span class="tag">Basse température</span>
-          <span class="tag">Chauffage seul</span>
+        <div class="card-corps">
+          <h3>HYDROMOTRIX Compact Visio</h3>
+          <div class="range">25 kW</div>
+          <ul class="specs">
+            <li><span>Pose</span>Murale</li>
+            <li><span>Technologie</span>Basse température</li>
+            <li><span>Eau chaude</span>Non — chauffage seul</li>
+            <li><span>Évacuation</span>VMC gaz</li>
+          </ul>
+          <p class="card-desc">Compacte, chauffage seul, compatible VMC gaz collective.</p>
+          <div class="tags">
+            <span class="tag">Murale</span>
+          </div>
+          <div class="ref">Réf. B4AO25060 · Cedeo 3655682</div>
         </div>
-        <div class="ref">Réf. B4AO25060 · Cedeo 3655682</div>
         <a class="card-cta" href="tel:0174601795">
           Demander un devis
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
-      <div class="card" data-tags="murale condensation mixte">
-        <div class="card-top">
-          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+      <div class="card" data-tags="murale condensation ecs">
+        <div class="card-visuel">
+          <img src="https://www.cedeo.fr/asset/65/39/AST256539-L.jpg" alt="Chaudière Frisquet HYDROCONFORT Condensation Solaire 20 kW" loading="lazy" decoding="async"
+               onerror="this.closest('.card-visuel').classList.add('sans-image')">
+          <div class="card-fallback"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
           <span class="badge badge-A">Classe A</span>
         </div>
-        <h3>HYDROCONFORT Condensation Solaire</h3>
-        <div class="range">20 kW</div>
-        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale nue à condensation, chauffage + ECS accumulation solaire</p>
-        <div class="tags">
-          <span class="tag">Murale</span>
-          <span class="tag">Condensation</span>
-          <span class="tag">Mixte chauffage + ECS</span>
+        <div class="card-corps">
+          <h3>HYDROCONFORT Condensation Solaire</h3>
+          <div class="range">20 kW</div>
+          <ul class="specs">
+            <li><span>Pose</span>Murale</li>
+            <li><span>Technologie</span>Condensation solaire</li>
+            <li><span>Eau chaude</span>Accumulée + appoint solaire</li>
+            <li><span>Évacuation</span>Ventouse</li>
+          </ul>
+          <p class="card-desc">Prévue pour être couplée à des panneaux solaires thermiques : l'eau chaude solaire en priorité, la chaudière en appoint.</p>
+          <div class="tags">
+            <span class="tag">Murale</span><span class="tag">Condensation</span><span class="tag">Eau chaude accumulée</span>
+          </div>
+          <div class="ref">Réf. A4AO20000 · Cedeo 3762495</div>
         </div>
-        <div class="ref">Réf. A4AO20000 · Cedeo 3762495</div>
         <a class="card-cta" href="tel:0174601795">
           Demander un devis
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
-      <div class="card" data-tags="murale basse-temperature chauffage">
-        <div class="card-top">
-          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+      <div class="card" data-tags="murale mixte">
+        <div class="card-visuel">
+          <img src="https://www.cedeo.fr/asset/37/56/AST3813756-L.jpg" alt="Chaudière Frisquet HYDROMOTRIX Compact Evolution Visio 25 kW" loading="lazy" decoding="async"
+               onerror="this.closest('.card-visuel').classList.add('sans-image')">
+          <div class="card-fallback"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
           <span class="badge badge-B">Classe B</span>
         </div>
-        <h3>HYDROMOTRIX Compact Evolution Visio</h3>
-        <div class="range">25 kW</div>
-        <p style="color:var(--muted); font-size:0.85rem;">Chaudière murale basse température, chauffage seul</p>
-        <div class="tags">
-          <span class="tag">Murale</span>
-          <span class="tag">Basse température</span>
-          <span class="tag">Chauffage seul</span>
+        <div class="card-corps">
+          <h3>HYDROMOTRIX Compact Evolution Visio</h3>
+          <div class="range">25 kW</div>
+          <ul class="specs">
+            <li><span>Pose</span>Murale</li>
+            <li><span>Technologie</span>Basse température</li>
+            <li><span>Eau chaude</span>Instantanée</li>
+            <li><span>Évacuation</span>Sortie cheminée</li>
+          </ul>
+          <p class="card-desc">Version compacte sur conduit de cheminée, chauffage et eau chaude.</p>
+          <div class="tags">
+            <span class="tag">Murale</span><span class="tag">Mixte chauffage + ECS</span>
+          </div>
+          <div class="ref">Réf. Cedeo 3655681</div>
         </div>
-        <div class="ref">Réf. Cedeo 3655681</div>
         <a class="card-cta" href="tel:0174601795">
           Demander un devis
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
-      <div class="card" data-tags="murale condensation chauffage">
-        <div class="card-top">
-          <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
+      <div class="card" data-tags="murale condensation">
+        <div class="card-visuel">
+          <img src="https://www.cedeo.fr/asset/88/92/AST23608892-L.jpg" alt="Chaudière Frisquet HYDROMOTRIX Visio 45 kW" loading="lazy" decoding="async"
+               onerror="this.closest('.card-visuel').classList.add('sans-image')">
+          <div class="card-fallback"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 17v-3.5C7 12 8 11 9.5 11h5c1.5 0 2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="8" r="1" fill="currentColor"/><circle cx="14.5" cy="8" r="1" fill="currentColor"/></svg></div>
           <span class="badge badge-A">Classe A</span>
         </div>
-        <h3>HYDROMOTRIX Visio</h3>
-        <div class="range">45 kW</div>
-        <p style="color:var(--muted); font-size:0.85rem;">Chaudière à condensation, chauffage seul</p>
-        <div class="tags">
-          <span class="tag">Murale</span>
-          <span class="tag">Condensation</span>
-          <span class="tag">Chauffage seul</span>
+        <div class="card-corps">
+          <h3>HYDROMOTRIX Visio</h3>
+          <div class="range">45 kW</div>
+          <ul class="specs">
+            <li><span>Pose</span>Murale</li>
+            <li><span>Technologie</span>Condensation</li>
+            <li><span>Eau chaude</span>Non — chauffage seul</li>
+            <li><span>Évacuation</span>Ventouse</li>
+          </ul>
+          <p class="card-desc">Forte puissance pour grande maison, immeuble ou local professionnel.</p>
+          <div class="tags">
+            <span class="tag">Murale</span><span class="tag">Condensation</span>
+          </div>
+          <div class="ref">Réf. A4AB45220 · Cedeo 7605217</div>
         </div>
-        <div class="ref">Réf. A4AB45220 · Cedeo 7605217</div>
         <a class="card-cta" href="tel:0174601795">
           Demander un devis
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
+    </div>
     </div>
   </div>
 </section>
